@@ -1,0 +1,143 @@
+.show-container {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.show-cards-container {
+ width: 800px;
+}
+
+.show-card {
+  margin: 20px;
+}
+
+.puppy-banner {
+  color: white;
+  text-align: center;
+  height: 450px;
+  // object-fit: cover !important;
+  background-size: cover !important;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  vertical-align: top;
+}
+
+
+
+.show-banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.show-banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.puppy-profile {
+  position: relative;
+}
+
+.puppy-name-breed {
+  h1 {
+    font-weight: bold;
+  }
+}
+
+.flex-column {
+  margin-right: 30px;
+  display: flex;
+  i {
+    margin-right: 10px;
+  }
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.puppy-tool {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #999;
+  width: 300px;
+  position: relative;
+  position: sticky !important;
+  top: 0;
+  padding: 10px;
+  display: table;
+  border-radius: 5px;
+  h1 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  div {
+    display: table-row;
+  }
+}
+
+.book-button {
+  margin: 0 auto;
+  display: block;
+  width: 160px;
+}
+
+.puppy-review {
+  h2 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+
+.puppy-description {
+  h2 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+.pup-owner {
+  width: 65px;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+
+.form-btn {
+  padding: 10px;
+  border-radius: 5px;
+  background: #7539D5;
+  color: white;
+  margin: 10px;
+  margin-top: 15px;
+}
+.form-btn:hover {
+  opacity: 0.8;
+  margin: 10px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #7539D5;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #7539D5;
+  color: white;
+}
+
+.top-margin {
+  margin-top: 30px;
+  margin-bottom: -15px;
+}

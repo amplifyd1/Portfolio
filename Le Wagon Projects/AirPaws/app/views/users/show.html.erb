@@ -1,0 +1,107 @@
+<!-- <div>
+    <#% selectedcity = @backgroundphoto.find do |href|  %>
+      <#% href["name"] == @user.location.capitalize %>
+    <#% end %>
+    <#% selectedcity["href"] %>
+
+
+    <#% url = selectedcity["href"]
+    teleport_data = open(url).read
+    imageshref = JSON.parse(teleport_data)
+    images = imageshref["_links"]["ua:images"]["href"] %>
+
+    <#% imagesurl = images
+    image_data = open(imagesurl).read
+    imagesphotos = JSON.parse(image_data)
+    image = imagesphotos["photos"]
+    img = image[0]["image"]["web"]
+    %>
+
+  <#%= image_tag(img, class: "profile-banner") %>
+</div>
+ -->
+ <div>
+  <img style="background-image: url(<%= cl_image_path @user.photo %>)" class="puppy-banner">
+ </div>
+
+<div class="avatar-container">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTBwzDCJ0rk4OPqjnMBtXWyUoXkSbLrxv2NajYWa18I5y3p3M5"" class="user-avatar">
+</div>
+
+<!-- if current user = profile page with all dogs and bookings -->
+<!-- if not, can see profile page  with all dogs and reviews -->
+<!-- app/views/articles/show.html.erb -->
+
+<div class="profile-container">
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#bookings" data-toggle="tab">My Bookings</a></li>
+    <li><a href="#puppies" data-toggle="tab">My puppies</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="bookings">
+      <div class="booking-title">
+        <h2>Your Pup Bookings</h2>
+      </div>
+      <% @bookings.each do |booking| %>
+        <div class="booking-card">
+          <div class="row-avatar">
+            <img src="<%= booking.puppy.photo %>" class="img-circle list-avatar">
+          </div>
+          <div class="row-name-breed">
+            <h3><%= booking.puppy.name.capitalize %></h3>
+            <p><%= booking.puppy.breed.capitalize %></p>
+          </div>
+          <div class="row-dates">
+            <p><i class="far fa-calendar-alt"></i> Dates of your puppy date</p>
+            <p><%= booking.pick_up %> - <%= booking.drop_off %></p>
+          </div>
+          <div class="row-location">
+            <p><i class="fas fa-map-marker-alt"></i> <%= booking.puppy.location.capitalize %></p>
+          </div>
+          <div class="row-price">
+            <p><i class="fas fa-pound-sign"></i> <%= booking.puppy.price %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="tab-pane" id="puppies">
+      <div>
+        <h2>My Puppies</h2>
+      </div>
+
+<div class="top-margin">
+    <%= link_to "Add puppy", new_puppy_path, class: "form-btn" %>
+</div>
+
+      <div class="container-index">
+        <div class="row">
+          <% current_user.owned_puppies.each do |puppy| %>
+            <%= link_to puppy_path(puppy) do %>
+              <div class="col-xs-12 col-md-6 col-lg-4 space">
+                <div class="card" style="background-image: url(<%= puppy.photo %>)">
+                  <div class="card-category"><%=puppy.name%></div>
+                  <div class="card-description">
+                    <h2><%= puppy.owner.first_name.capitalize %></h2>
+                    <p><%= puppy.age %> month old <%= puppy.breed %> for $<%= puppy.price %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- <div class="booking-card">
+
+  </div>
+
+
+
+
+</div>
+
+ -->

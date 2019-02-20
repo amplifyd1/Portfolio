@@ -1,0 +1,13 @@
+console.log(<%= @id %>)
+function success() {
+      swal({
+        title: "Submitted!",
+        text: "You've just returned the translation",
+        icon: "success"
+      }).then(function() {
+        window.location = "/users/<%= @id %>"
+      })
+    }
+
+
+success();

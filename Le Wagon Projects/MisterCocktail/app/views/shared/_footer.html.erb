@@ -1,0 +1,33 @@
+<!-- Footer -->
+<footer class="page-footer font-small indigo">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><%=  link_to 'Back to Cocktails', root_path %></h5>
+
+        </div>
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><%= link_to 'Destroy', @cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></h5>
+
+        </div>
+         <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><%= link_to 'Edit', edit_cocktail_path(@cocktail) %></h5>
+
+        </div>
+         <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail) %></h5>
+        </div>

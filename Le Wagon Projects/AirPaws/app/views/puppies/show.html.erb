@@ -1,0 +1,90 @@
+<div>
+  <img style="background-image: url(<%= cl_image_path @puppy.photo %>)" class="puppy-banner">
+</div>
+
+<div>
+  <div class="show-container">
+    <div class="show-cards-container">
+      <div class="puppy-profile show-card">
+        <div class="puppy-name-breed">
+          <h1><%= @puppy.name %></h1>
+        </div>
+
+        <div class='flex'>
+              <div class='flex-column'>
+                <i class="fas fa-paw"></i>
+                <p><%= @puppy.breed.capitalize %></p>
+              </div>
+              <div class='flex-column'>
+                <i class="far fa-calendar-alt"></i> <p><%= @puppy.age %> months</p>
+              </div>
+              <div class='flex-column'>
+                <i class="fas fa-map-marker-alt"></i> <p><%= @puppy.location.capitalize %></p>
+              </div>
+        </div>
+      </div>
+
+      <div class="show-card puppy-description">
+        <h2>About the pup</h2>
+        <p>
+          Companion Dogs  Standard, miniature, and toy
+          The Poodle is a dog breed that is divided into three size varieties, the Standard Poodle, Miniature Poodle and Toy Poodle. The origin of the breed is still discussed, with a prominent dispute over whether the poodle descends from Germany as a type of water dog, or from the French Barbet.[5]
+
+          Ranked second most intelligent dog breed just behind the Border Collie,[6] the poodle is skillful in many dog sports and activities, including agility, obedience, tracking to herding, circus performers or assistance dogs. Poodles have taken top honors in many conformation shows, including "Best in Show" at the Westminster Kennel Club Dog Show in 1991 and 2002, and at the World Dog Show in 2007 and 2010.
+
+          Toy Poodles won "Best in Show" at Crufts in 1966 and 1982. Standard Poodles achieved the award in 1955, 1985, 2002, and 2014. The 2002 winner came from Norway and was the first overseas exhibit to win the Crufts best in show award.
+        </p>
+      </div>
+      <div class="show-card puppy-review">
+        <h2><%= Review.count %> Reviews</h2>
+        <p>Wesley: Was the cutest thing ever and far too diffcult to let go</p>
+        <p>George: Fluffiest pup in the world, could not stop cuddling it.</p>
+        <p>
+          Miniature Poodles are neat little dogs, with a beautiful coat to boot!
+
+          They are pretty high-energy and enjoy mental and physical activity, but they also enjoy a good lap to nap in once playtime is over.
+
+          You’ll definitely need to keep a Miniature Poodle occupied, as they do not like to be bored and may become depressed if they aren’t given some kind of stimulation every day.
+
+          Additionally, a Miniature Poodle will need daily combing and regular trips to the groomer, depending on whether you keep their coat long or clipped. But you will not have to deal with much shedding.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="show-card puppy-tool">
+      <div>
+        <h1>Details for renting</h1>
+      </div>
+      <div>
+        <h2>Owner name:</h2>
+        <p>Prince Harry, Duke of Sussex</p>
+      </div>
+        <h2>Owner comments:</h2>
+        <p>Megan and I love this pup, please do take care</p>
+      <div>
+        <h2>Price per Day:</h2>
+        <p>£<%= @puppy.price %></p>
+      </div>
+      <div>
+        <h2>Pick up location:</h2>
+        <p>Clarence House</p>
+      </div>
+      <div class="show-card book-form">
+        <%= simple_form_for(:booking, url: puppy_bookings_path(puppy_id: @puppy.id), method: :post) do |f| %>
+          <%= f.input :pick_up, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :drop_off, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.submit "Confirm pup booking", class: "form-btn", id: "sweet-alert"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- to add booking -->
+<!-- to add review -->

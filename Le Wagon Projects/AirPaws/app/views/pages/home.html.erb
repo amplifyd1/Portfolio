@@ -1,0 +1,33 @@
+<%= render 'shared/navbar' %>
+<%= render 'layouts/banner' %>
+
+
+<div class="main-page" style = "background-color: white;">
+<!-- Search form -->
+<div class="sexysearch">
+      <%= form_tag puppies_path, :class => "form-inline md-form form-sm", method: :get do |f| %>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <%= text_field_tag :location, params[:location], placeholder: 'Search cities..', :class => "form-control form-control-sm ml-3 w-75" %>
+                <% end %>
+</div>
+
+
+  <div class="popular"><h3>A selection of the most popular puppies</h3></div>
+    <div class="container-index">
+      <div class="row">
+          <% @puppies.each do |puppy| %>
+              <%= link_to puppy_path(puppy) do %>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="card" style="background-image: url(<%= puppy.photo %>)">
+                  <div class="card-category"><%=puppy.name%>
+                  </div>
+                  <div class="card-description">
+                    <h2><%= puppy.owner.first_name.capitalize %></h2>
+                    <p><%= puppy.age %> month old <%= puppy.breed %> for $<%= puppy.price %></p>
+                  </div>
+              </div>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>

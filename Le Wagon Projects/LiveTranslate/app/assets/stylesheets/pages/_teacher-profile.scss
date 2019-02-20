@@ -1,0 +1,270 @@
+.flex-container {
+display:flex;
+background: white;
+
+}
+
+.side-bar {
+  position: sticky;
+  height: 100vh;
+  width: 25%;
+  text-align: center;
+  margin: 40px;
+  background: rgb(245,245,245);
+  box-shadow: 0px 0px 1px 1px rgb(245,245,245);
+  padding: 30px;
+  border-radius: 4px;
+
+}
+
+.name {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.institution {
+  // margin-top: 5px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.profession {
+  margin-top: 10px !important ;
+}
+
+.tab-content {
+}
+
+.avatar img {
+  width: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+
+.profile {
+    border-bottom: 1px solid rgb(220,220,220);
+    padding: 20px;
+}
+
+.bars {
+  .nav .active  a {
+    background-color: white !important ;
+    color: rgb(51,51,51) !important ;
+    border-right: 4px solid #EE6352;
+  }
+
+  .nav li a {
+  color: rgb(150,150,150);
+   padding-top: 12px;
+   padding-bottom: 12px;
+  }
+  .nav li a:hover {
+    background-color: rgba(236, 100, 86, 0.6);
+    color: white;
+  }
+
+  .nav li a:focus {
+    background-color: white;
+    color: rgb(51,51,51);
+  }
+}
+
+.bars a {
+  text-decoration: none;
+  text-align: left;
+  transition: .3s;
+
+.bars {
+  // border-left: 4px solid #EE6352;
+  color: #919193;
+}
+
+}
+.lesson-name {
+  color: rgb(51,51,51);
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.page {
+  height: 100vh;
+  width: 75%;
+  text-align: left;
+  margin: 40px;
+  background: white;
+  border-radius: 5px;
+}
+
+
+.bars li {
+  margin-top: 20px;
+}
+
+
+[id^=preview] {
+  position: relative;
+  .files-image {
+      visibility: hidden;
+      height: 300px;
+      width: 200px;
+      // border-style: solid;
+      border-width: 1px;
+      border-radius: 4px;
+      box-shadow: 1px 1px 1px 1px lightgrey;
+      background-size: cover;
+      // position: absolute;
+      position: fixed;
+      // top: 80px;
+      // left: -60px;
+      // right: 10px;
+
+      bottom: 50px;
+      right: 50px;
+      z-index: 5;
+      transition: .3s visibility;
+   }
+
+  &:hover {
+    text-decoration: none;
+    // display: block;
+
+    // border-bottom: 4px solid rgba(236, 100, 86, 1);
+    color: rgb(51,51,51);
+    .files-image { visibility: visible; }
+
+  }
+}
+
+.preview_link {
+color: rgb(51,51,51);
+padding-top: 12px;
+padding-bottom: 12px;
+padding: 30px;
+display: block;
+border-bottom: 4px solid transparent;
+}
+
+.assignment {
+  display: flex;
+  padding-right: 30px;
+  background-color: rgb(245,245,245);
+  margin-top: 20px;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 0 solid #EE6352;
+  transition: .3s;
+}
+
+.assignment:hover {
+
+  border-left: 5px solid #EE6352;
+}
+.doc-count {
+ text-align: left;
+ color: rgb(200,200,200);
+ font-size: 12px;
+}
+.doc-name {
+  width: 80%;
+  text-align: left;
+  p {
+    font-size: 12px;
+    color: #333
+  }
+}
+
+.btn-to-do {
+  background-color: #EE6352;
+  padding: 9px 25px;
+  border-radius: 4px;
+    color: white !important ;
+  width: 110px;
+  text-align: center;
+  margin-right: 15px;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.submitted {
+background-color: rgb(91,166,252);
+padding: 9px 25px;
+border-radius: 4px;
+color: white;
+width: 150px;
+text-align: center;
+  p{
+    margin: 0
+  }
+}
+
+.livetranslated {
+background-color: #32B796;
+padding: 9px 25px;
+border-radius: 4px;
+color: white;
+text-align: center;
+vertical-align: center;
+  p{
+    margin: 0
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  &:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+  }
+}
+
+
+
+.btn-upload {
+  width: 150px;
+  color: white !important ;
+  background-color: #EE6352;
+  text-align: center !important ;
+  &:hover {
+    color: rgb(51,51,51);
+        opacity: 0.8;
+  }
+}
+
+.fas {
+  margin-right: -5px;
+  margin-left: -20px;
+  color: rgb(150,150,150);
+    &:hover {
+      color: #EE6352;
+    }
+}
+
+.btn-good {
+  color: white;
+  margin-right: 10px;
+  border-color: #32B796;
+  background-color: #32B796;
+    &:hover {
+      color: white !important ;
+  }
+}
+
+.modal-title {
+  text-align: left;
+}
+
+.invoices101 {
+  padding: 20px;
+}

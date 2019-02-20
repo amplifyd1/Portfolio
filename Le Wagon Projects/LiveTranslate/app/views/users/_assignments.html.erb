@@ -1,0 +1,40 @@
+<% docs = lesson.documents.order(created_at: :desc) %>
+<% docs.each do |t| %>
+  <div class="assignment">
+    <div class="doc-name">
+      <% if t.sections.find_by(student: current_user).status == "To Do" %>
+        <%= link_to edit_document_section_path(t, t.sections.where(student: current_user).first), id: "preview_#{t.id}", class: "preview_link" do %>
+          <%= t.title %>
+          <p>Added: <%= t.created_at.strftime("%d %b %y") %></p>
+          <%= cl_image_tag t.pdf.file.public_id, format: :jpg, density: 300, class: 'files-image' %>
+        <% end %>
+      <% elsif t.sections.find_by(student: current_user).status == "Submitted" %>
+        <div class="preview_link">
+          <%= t.title %>
+          <p>Added: <%= t.created_at.strftime("%d %b %y") %></p>
+          <p>Awaiting live<strong>translate</strong> session</p>
+        </div>
+      <% elsif t.sections.find_by(student: current_user).status == "livetranslated" %>
+        <%= link_to document_section_path(t, t.sections.where(student: current_user).first), id: "preview_#{t.id}", class: "preview_link" do %>
+          <%= t.title %>
+          <p>Added: <%= t.created_at.strftime("%d %b %y") %></p>
+          <%= cl_image_tag t.pdf.file.public_id, format: :jpg, density: 300, class: 'files-image' %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="status">
+      <% if t.sections.find_by(student: current_user).status == "Submitted" %>
+        <div class="submitted">
+          <p>Submitted</p>
+        </div>
+      <% elsif t.sections.find_by(student: current_user).status == "To Do"%>
+          <%= link_to 'To do', document_path(t), class: "btn-to-do" %>
+      <% else %>
+        <div class="livetranslated">
+          <a href=<%= document_section_path(t, t.sections.where(student: current_user).first) %>>live<strong>translated</strong></a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+

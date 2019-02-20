@@ -1,0 +1,5 @@
+<%= render 'student_profile' if current_user.user_type == 'Student'  %>
+<%= render 'teacher_profile' if current_user.user_type == 'Teacher' %>
+<%= render 'business_profile' if current_user.user_type == 'Business' %>
+
+

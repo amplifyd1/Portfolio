@@ -1,0 +1,71 @@
+.banner {
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  display: flex;
+  align-items: center;
+  color: #eee;
+  text-align: center;
+  z-index: 4;
+
+}
+.banner h1 {
+    font-size: 100px;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    padding: 100px;
+    height: 100vh;
+    text-align: left;
+}
+
+.banner-small {
+    font-size: 40px;
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: -.02em;
+    padding: 100px;
+    z-index: 4;
+    color: white;
+}
+
+.blur {
+  opacity: 1;
+
+}
+
+#blurred-image-container {
+    display:block;
+    padding:0;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:-1;
+}
+
+.img-src {
+    position: absolute;
+    background:url('https://images.unsplash.com/photo-1529927066849-79b791a69825?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=62b4436955bfd4ff22942d26abebb3c2&auto=format&fit=crop&w=2549&q=80') center center;
+    background-size: cover;
+    top: -10%;
+    bottom: 10%;
+    left: -10%;
+    right: 10%;
+    width:120%;
+    height:120%;
+}
+
+.img-src.blurred-image {
+    opacity:0;
+    -webkit-filter: blur(20px) brightness(0.7);
+    -ms-filter: blur(20px) brightness(0.7);
+    -o-filter: blur(20px) brightness(0.7);
+    filter: blur(20px) brightness(0.7);
+}
+
+.content {
+    padding:150px 50px;
+    color:#fff;
+    text-align:center;
+}
+

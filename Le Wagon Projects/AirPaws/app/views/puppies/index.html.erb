@@ -1,0 +1,36 @@
+<div class="container-index-puppy">
+    <div class="banner-index">
+      <%= form_tag(puppies_path, method: :get) do |f| %>
+     <div class="sexiersearch">
+              <div class="display: inline-block field">
+              <%= text_field_tag :breed, params[:breed], placeholder: 'Breed..' %>
+              <%= text_field_tag :location, params[:location], placeholder: 'City..' %>
+              </div>
+               <div class="form-actions ">
+                  <%= submit_tag :Search, class: "btn btn-secondary btn-sexy" %>
+              </div>
+              <% end %>
+            </div>
+    </div>
+</div>
+
+
+  <div class="container-index">
+      <div class="row">
+          <% @puppies.each do |puppy| %>
+              <%= link_to puppy_path(puppy) do %>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="card" style="background-image: url(<%= puppy.photo %>)">
+                  <div class="card-category"><%=puppy.name%>
+                  </div>
+                  <div class="card-description">
+                    <h2><%= puppy.owner.first_name.capitalize %></h2>
+                    <p><%= puppy.age %> month old <%= puppy.breed %> for $<%= puppy.price %></p>
+                  </div>
+              </div>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+

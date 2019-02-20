@@ -1,0 +1,80 @@
+
+.space {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-banner {
+  display: flex;
+  text-align: center;
+  height: 50vh;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.avatar-container {
+  position: absolute;
+  top: 350px;
+  width: 100%;
+}
+
+
+.user-avatar {
+  border-radius: 50%;
+  border: #2A2D30 solid 6px;
+  width: 175px;
+  height: 175px;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.profile-container {
+  margin-right: 150px;
+  margin-left: 150px;
+  margin-top: 100px;
+}
+
+.booking-card {
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  h3 {
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0 0 12.5px;
+  }
+}
+
+
+
+.row-name-breed {
+  padding-right: 70px;
+}
+
+.row-dates {
+  padding-right: 50px;
+}
+
+.row-avatar {
+  padding-right: 25px;
+}
+
+.row-location {
+  padding-right: 70px;
+}
+
+.list-avatar {
+  width: 75px;
+  height: 75px;
+}
+
+.booking-title {
+  h2 {
+    font-weight: bold;
+  }
+}

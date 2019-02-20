@@ -1,0 +1,146 @@
+.banner-sad {
+  color: white;
+  text-align: center;
+  height: calc(70vh);
+  background-image: url('https://images.unsplash.com/photo-1455380579765-810023662ea2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c588e711c7511c30d1b9341cfdc6691d&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover !important;
+  background-position: 90% 10%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: flex-end;
+  justify-content: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  // padding-bottom: 100px;
+
+}
+.banner-happy {
+  color: #555555;
+  background-image: url('https://1p4xnw9vz583g92k7249hwjj-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/alicia-jones-421556-unsplash.jpg');
+  background-position: 70% 30%;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  padding-top: 50px;
+  margin-top: 500px;
+}
+
+.card-happy {
+  color: white;
+  background-image: url('https://images.unsplash.com/photo-1515952782260-36998d667f89?ixlib=rb-0.3.5&s=3106487c57ce7383dedbe1cd94542c0f&auto=format&fit=crop&w=1950&q=80');
+  text-align: center;
+  height: 360px;
+  width: 550px;
+  background-position: 30% 70%;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  border-radius: 3px;
+  box-shadow: 3px 3px 10px 0px #999999;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-sad {
+  color: white;
+  background-image: url('https://images.unsplash.com/photo-1423958950820-4f2f1f44e075?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=93e8cba7a2ed333f58947d9f76d97eff&auto=format&fit=crop&w=1950&q=80');
+  text-align: center;
+  height: 360px;
+  width: 550px;
+  background-position: 90% 10%;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  border-radius: 3px;
+  box-shadow: 3px 3px 10px 0px #999999;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-puppy{
+  background-image: url('https://images.unsplash.com/photo-1506780685701-ba404b9e640d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4205d2feba753aae705a89c3957e40ad&auto=format&fit=crop&w=1950&q=80');
+  text-align: center;
+  height: 420px;
+  width: 720px;
+  background-position: 90% 10%;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  border-radius: 3px;
+  box-shadow: 3px 3px 10px 0px #999999;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  color: #555555;
+}
+.story-banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.story-banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.story-flex-box {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-style: bold;
+}
+
+h3 {
+  margin-bottom: 30px;
+}
+#searchi {
+  color: grey !important;
+}
+
+// .btn-primary {
+//   background-color: #7539D5;
+//   color: white;
+// }
+
+.form-btn-story {
+  padding: 10px;
+  border-radius: 5px;
+  background: #7539D5;
+  color: white;
+  margin: 10px;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+.form-btn-story:hover {
+  opacity: 0.8;
+  margin: 10px;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #7539D5;
+  color: white;
+   text-align: center;
+  text-decoration: none;
+}

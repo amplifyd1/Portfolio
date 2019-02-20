@@ -1,0 +1,67 @@
+<div class="flex-container">
+  <div class="left-section">
+   <div class="links">
+    <% if user_signed_in? %>
+      <div class="logout-profile-flex">
+        <div id="spacer">
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+        </div>
+        <div>
+          <%= link_to "Profile", user_path(current_user) %>
+        </div>
+      </div>
+    <% else %>
+      <%= link_to "Login / Register", new_user_session_path %>
+    <% end %>
+   </div>
+    <h1>live<strong>translate</strong></h1>
+    <h3>Linking talented languages students to small businesses.</h3>
+    <div class="box">
+      <form class="form-inline" action="/users/sign_in">
+      <div>
+        <input type="text" placeholder="Your email" name="email" class="form-control custom">
+      </div>
+      <input type="hidden" id="custId" name="register" value="true">
+      <div>
+        <input type="submit" value= "Get started", class="button", id="get-started">
+        <%#= link_to "Get started", new_user_session_path, class: "button" %>
+      </div>
+      </form>
+
+    </div>
+  </div>
+
+<div class="right-section">
+    <div id="fullpage" class="carousel">
+      <div class="section carousel-item1">
+        <%= image_tag 'landing.png' %>
+      </div>
+      <div class="section carousel-item2">
+        <%= image_tag 'works.png' %>
+        <h2>How it works?</h2>
+        <p>Step 1 | Upload your document <br>
+           Step 2 | A university class translates it <br>
+           Step 3 | We send your document back to you</p>
+      </div>
+      <div class="section carousel-item3">
+        <%= image_tag 'upload.png' %>
+        <h3>Step 1</h3>
+        <p>When you upload your document we assign it to a class at one of our accredited partner universities.</p>
+      </div>
+      <div class="section carousel-item4">
+        <%= image_tag 'sections.png' %>
+        <h3>Step 2</h3>
+        <p>Students in the class work on sections of the document indiviually and then a teacher moderates the final version during a lesson.
+        </p>
+      </div>
+      <div class="section carousel-item5">
+        <%= image_tag 'submit.png' %>
+        <h3>Step 3</h3>
+        <p>
+          We send your document back to you. <br>
+          Your translation is reliable, great value for money and has harnessed the talents of motivated students.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

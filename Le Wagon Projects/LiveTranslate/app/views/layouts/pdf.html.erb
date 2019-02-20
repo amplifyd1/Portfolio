@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PDF</title>
+  <%= wicked_pdf_stylesheet_link_tag "application" -%>
+</head>
+<body>
+  <div class="pdf-container">
+  <h1 class="pdf-logo">live<strong class=pdf-strong>translate</strong></h1>
+  <div>
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>

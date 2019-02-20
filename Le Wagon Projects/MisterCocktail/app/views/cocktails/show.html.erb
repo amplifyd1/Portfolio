@@ -1,0 +1,29 @@
+<div class="text-center"><%= flash[:sucess] %></div>
+
+<div class="container">
+  <div class="content">
+    <div class="cards-container">
+
+      <h1 class="text-center"> <%=  @cocktail.name  %></h1>
+      <div class="row">
+      <% @cocktail.doses.each do |dose| %>
+      <div class='col-xs-12 col-sm-6 col-md-4'>
+        <div class="card">
+          <div class="card-body">
+        <h3 class="card-title" > <%= dose.ingredient.name %></h3>
+        <p class="card-subtitle"> <%= dose.description%></p>
+        </div>
+        </div>
+      </div>
+        <% end %>
+      </div>
+      <!-- <div class="page-footer font-small cyan darken-3">
+      <%=  link_to 'Back to Cocktails', root_path %> |
+      <%= link_to 'Destroy', @cocktail, method: :delete, data: { confirm: 'Are you sure?' } %> |
+      <%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
+      <%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail) %>
+      </div> -->
+    </div>
+    </div>
+    <%= render partial: "shared/footer" %>
+</div>
