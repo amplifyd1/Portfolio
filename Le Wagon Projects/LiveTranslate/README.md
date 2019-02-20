@@ -4,6 +4,7 @@
 
 # Tech Used
 Ruby on Rails, Javascript, HTML, CSS, jQuery, JSON, PostgreSQL, Devise, Bootstrap, Cloudinary, Stripe, WickedPDF. 
+
 The live link of livetranslate can be found [here](https://www.livetranslate.space)
 
 # How it works
